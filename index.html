@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.min.css">
+	<title>Главная</title>
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
+</head>
+<body>
+<header class="header fixset">
+    <div class="container">
+        <div class="header__wrapper">
+            <a href="../index.html" class="header__logo">Tripay</a>
+            <div class="header__menu menu">
+                
+                <nav class="header__nav">
+                    <ul class="header__list">
+                        <li class="header__item"><a href="#item-1" class="header__link">Business</a></li>
+                        <li class="header__item"><a href="#item-2" class="header__link">Pricing</a></li>
+                        <li class="header__item"><a href="#item-3" class="header__link">Features</a></li>
+                        <li class="header__item"><a href="#item-4" class="header__link">About</a></li>
+                    </ul>
+                </nav>
+                
+            </div>
+            <ul class="header__log menu">
+                <li class="header__item"><a href="#" class="header__link --active-cl">Log in</a></li>
+                <li class="header__item"><a href="#" class="header__link btn">Sign Up</a></li>
+            </ul>
+            <div class="mnu__icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+	<section class="hero">
+        <div class="container">
+            <div class="hero__wrapper">
+                <div class="hero__about">
+                    <h1 class="hero__title">Banking Should 
+                        <br>    Be Easy.</h1>
+                    <p class="hero__text">financial transactions without interet using a mobile device such as a smartphone or tablet with bluetooth. </p>
+                    <button type="submit" class="btn">Get started</button>
+                </div>
+                <div class="hero__img">
+                    <img src="./img/hero-img/img-2.png" alt="img" width="635">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="work">
+        <div class="container">
+            <div class="work__wrapper">
+                <div class="work__about">
+                    <h2 class="work__title">How it works</h2>
+                    <p class="work__text-about">Mobile banking differs from mobile payments,<br> which involves the use of a mobile device</p>
+                </div>
+                <ul class="work__menu">
+                    <li class="work__item">
+                        <a href="" class="work__link">
+                            <img src="./img/work/information.png" alt="" class="work-mnu__img">
+                            <h2 class="work-mnu__title">Information</h2>
+                            <p class="work__text">Enter your information
+                                ensure your details
+                                safe and more secure</p>
+                        </a>
+                    </li>
+                    <li class="work__item">
+                        <a href="" class="work__link">
+                            <img src="./img/work/Data-Secure.png" alt="" class="work-mnu__img">
+                            <h2 class="work-mnu__title">Data Secure</h2>
+                            <p class="work__text">Sending money faster &
+                                easier with end to end
+                                encryption.</p>
+                        </a>
+                    </li>
+                    <li class="work__item">
+                        <a href="" class="work__link">
+                            <span class="--add-new">+ Add New</span>
+                            <img src="./img/work/Add-Cards.png" alt="" class="work-mnu__img">
+                            <h2 class="work-mnu__title">Add Cards</h2>
+                            <p class="work__text">Add multiple cards and  track
+                                your daily expense with quality
+                                interface</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</main>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__wrapper">
+				
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/app.min.js"></script>	
+	<script>
+		const menu = document.querySelector('.header__nav');
+			const menuBtn = document.querySelector('.mnu__icon')
+			const body = document.body;
+	
+	
+	
+			if(menu && menuBtn){
+				menuBtn.addEventListener('click', () =>{
+					menu.classList.toggle('active')
+					menuBtn.classList.toggle('active')
+					body.classList.toggle('lock')
+					
+				})
+				//___________________________Скрипт для бокової закритя панелі___________________________  
+				menu.addEventListener('click', e => {
+					if(e.target.classList.contains('header__nav')){
+						menu.classList.remove('active')
+						menuBtn.classList.remove('active')
+						body.classList.remove('lock')
+					}
+				})
+				//___________________________//Скрипт для бокової закритя панелі___________________________  
+				// menu.querySelectorAll('.header__link').forEach(link =>{
+				// 	link.addEventListener('click', () =>{
+				// 		menu.classList.remove('active')
+				// 		menuBtn.classList.remove('active')
+				// 		body.classList.remove('lock')
+				// 	})
+				// })
+			}
+			//_______________________________________________________
+			// const anchors = document.querySelectorAll('a[href*="#"]')
+			// anchors.forEach(anchors =>{
+			// 	anchors.addEventListener('click', event =>{
+			// 		event.preventDefault()
+	
+			// 		const blockId = anchors.getAttribute('href').substring(1)
+	
+			// 		document.getElementById(blockId).scrollIntoView({
+			// 			behavior: 'smooth',
+			// 			block: 'start',
+			// 		})
+			// 	})
+			// })
+	</script>
+</body>
+
+	</html>
